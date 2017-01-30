@@ -50,8 +50,7 @@
      #3.Uses descriptive activity names to name the activities in the data set
      setWithActivityNames <- merge(MeanSDdataset, ActivityFile,
                                                                      by="activityId",
-                                                                     all.x=TRUE)
-            
+                                                                     all.x=TRUE)      
 
      #4.Appropriately labels the data set with descriptive variable names.
      names(MeanSDdataset)<-gsub("^t", "time", names(MeanSDdataset))
@@ -60,7 +59,6 @@
      names(MeanSDdataset)<-gsub("Gyro", "Gyroscope", names(MeanSDdataset))
      names(MeanSDdataset)<-gsub("Mag", "Magnitude", names(MeanSDdataset))
      names(MeanSDdataset)<-gsub("BodyBody", "Body", names(MeanSDdataset))
-
 
      #5. From the data set in step 4, creates a second, independent tidy data set 
      #with the average of each variable for each activity and each subject.
