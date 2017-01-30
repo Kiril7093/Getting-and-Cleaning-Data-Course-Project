@@ -51,7 +51,6 @@
       
        
        
-       
 #3.Uses descriptive activity names to name the activities in the data set
        
        setWithActivityNames <- merge(MeanSDdataset, ActivityFile,
@@ -59,8 +58,6 @@
                                                                      all.x=TRUE)
        
        
-
-
 
 #4.Appropriately labels the data set with descriptive variable names.
        
