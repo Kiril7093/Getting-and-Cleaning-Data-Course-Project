@@ -64,7 +64,6 @@
      #with the average of each variable for each activity and each subject.
      tidyData2 <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
      tidyData2 <- tidyData2[order(tidyData2$subjectId, tidyData2$activityId),]
-
      write.table(tidyData2, "tidyData2.txt", row.name=FALSE)
        
        
