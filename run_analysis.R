@@ -37,7 +37,6 @@
      
      #2.Extracts only the measurements on the mean and standard deviation for 
      #each measurement.
-       
      colNames<- colnames(testtrainMerge)
        
      mean_and_std <- (grepl("activityId", colNames) | 
@@ -49,14 +48,12 @@
        
        
      #3.Uses descriptive activity names to name the activities in the data set
-       
      setWithActivityNames <- merge(MeanSDdataset, ActivityFile,
                                                                      by="activityId",
                                                                      all.x=TRUE)
             
 
      #4.Appropriately labels the data set with descriptive variable names.
-       
      names(MeanSDdataset)<-gsub("^t", "time", names(MeanSDdataset))
      names(MeanSDdataset)<-gsub("^f", "frequency", names(MeanSDdataset))
      names(MeanSDdataset)<-gsub("Acc", "Accelerometer", names(MeanSDdataset))
@@ -67,9 +64,9 @@
 
      #5. From the data set in step 4, creates a second, independent tidy data set 
      #with the average of each variable for each activity and each subject.
-       
      tidyData2 <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
      tidyData2 <- tidyData2[order(tidyData2$subjectId, tidyData2$activityId),]
+
      write.table(tidyData2, "tidyData2.txt", row.name=FALSE)
        
        
