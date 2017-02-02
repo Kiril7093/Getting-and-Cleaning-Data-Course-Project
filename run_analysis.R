@@ -9,21 +9,16 @@ download.file(fileURL, destfile="./data/Dataset.zip")
 unzip(zipfile="./data/Dataset.zip", exdir="./data")
 
 #Reading files:
-
 X_trainFile <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
 Y_trainFile <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
 Subject_trainFile <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
-
 
 X_testFile <- read.table("./data/UCI HAR Dataset/test/X_test.txt")
 Y_testFile <- read.table ("./data/UCI HAR Dataset/test/y_test.txt")
 Subject_testFile <- read.table("./data/UCI HAR Dataset/test/subject_test.txt")
 
-
-
 FeaturesFile <- read.table('./data/UCI HAR Dataset/features.txt')
 ActivityFile = read.table('./data/UCI HAR Dataset/activity_labels.txt')
-
 
 colnames(X_trainFile) <- FeaturesFile[,2] 
 colnames(Y_trainFile) <-"activityId"
@@ -34,7 +29,6 @@ colnames(Y_testFile) <- "activityId"
 colnames(Subject_testFile) <- "subjectId"
 
 colnames(ActivityFile) <- c("activityId","activityType")
-
 
 # Merge data:
 trainMerge <- cbind(Y_trainFile, Subject_trainFile, X_trainFile)
