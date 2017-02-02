@@ -9,6 +9,7 @@ Accelerometer and gyroscope was used to generate 3-axial raw signals: tAcc-XYZ a
 #Data transformation:
 The data sets were analyzed with run_analysis.R script to generate tidy data set “tidyData3.txt”
 There are 8 steps in data analysis process:
+
 1.	Creating a working directory. 
 2.	Download data files into working directory. 
 3.	Reading data files.
@@ -17,6 +18,7 @@ There are 8 steps in data analysis process:
 6.	Uses descriptive activity names to name the activities in the data set. 
 7.	Labels the data set with descriptive variable names. 
 8.	Generating a second, independent tidy data set ("tidyData3.txt") with the average of each variable for each activity and each subject.
+
 #List of abbreviations of the measurements:
 1.	Body = body movement.
 2.	Gravity = acceleration of gravity
